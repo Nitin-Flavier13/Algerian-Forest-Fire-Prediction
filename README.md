@@ -1,7 +1,5 @@
 # Algerian-Forest-Fire-Prediction
-Using Algerian Forest Fire dataset to predict Fire Weather index
-
-### Algerian Forest Fires Dataset
+Using Algerian Forest Fire dataset to predict Fire Weather index (FWI)
 
 The dataset includes 244 instances that regroup a data of two regions of Algeria, namely the Bejaia region located in the northeast of Algeria and the Sidi Bel-abbes region located in the northwest of Algeria.
 
