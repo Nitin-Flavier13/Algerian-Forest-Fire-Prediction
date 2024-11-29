@@ -11,11 +11,7 @@ app = application
 elasticNetCV = pickle.load(open('models/elasticNetCV.pkl','rb'))
 standardScaler = pickle.load(open('models/scaler.pkl','rb'))
 
-@app.route("/")
-def index():
-    return render_template('index.html')
-
-@app.route("/predictdata",methods=['GET','POST'])
+@app.route("/",methods=['GET','POST'])
 def predict():
     if request.method == "POST":
         Temperature = float(request.form.get('Temperature'))
@@ -32,7 +28,7 @@ def predict():
 
         pred_fwi = elasticNetCV.predict(input_data)
 
-        return render_template('home.html',results=pred_fwi)
+        return render_template('home.html',results=pred_fwi[0])
     else:
         return render_template('home.html')
 
